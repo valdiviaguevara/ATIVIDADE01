@@ -1,8 +1,9 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 05
+--Faça um programa que retorne True caso a entrada seja menor que -1 ou (maior que 1 E múltiplo de 2), e False caso contrário.
+f_Menor :: Int -> Bool 
+f_Menor x = (x < -1)||((x >1)&& (x `rem` 2 == 0))
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+    print (f_Menor (-1))
+    print (f_Menor (0))
+    print (f_Menor (2))
+    print (f_Menor (3))
