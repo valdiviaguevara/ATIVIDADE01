@@ -1,8 +1,12 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 09 parte B
+-- Encontre os 10 últimos anos bissextos (dica: use a função length para determinar o tamanho da lista).
+bissexto :: Integer -> Bool
+bissexto ano = (ano `rem` 4 == 0)
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  let ano_atual=2018
+  let listaBissextos=[x|x<-[1..ano_atual],(bissexto x==True)]
+  let n_elementos=length listaBissextos
+  let dez_Ultimos = n_elementos -10
+  --Listando os 10 ultomos anos bissextos
+  let lista_dez_ultimos=[listaBissextos !! i|i<-[dez_Ultimos..n_elementos-1]]
+  print (lista_dez_ultimos)
