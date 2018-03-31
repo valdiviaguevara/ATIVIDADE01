@@ -1,6 +1,6 @@
 --Exercicio 01
 module Main where
--- |Fun ̧c~ao principal
+-- |Func~ao principal
 main :: IO ()
 main = do
     print (2*3+5)
