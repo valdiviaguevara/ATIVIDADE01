@@ -1,8 +1,7 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 06
+--Faça uma função que recebe um tipo Integer e retorna ele dividido por:
+div2d :: Integer -> Double
+div2d a = (fromInteger a) / 2
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+    print (div2d 7)
+    print (div2d (-53))
