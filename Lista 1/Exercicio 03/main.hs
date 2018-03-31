@@ -1,8 +1,6 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 03
+--Faça uma função mult5 x que retorne True caso a entrada seja múltiplo de 5 e False caso contrário.
+mult3 :: Int -> Bool 
+mult3 x = (x `rem` 5 == 0)
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+    print (mult3 500)
