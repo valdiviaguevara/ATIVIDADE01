@@ -1,8 +1,6 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 11
+-- Crie um concatenador de strings que concatena duas strings separadas por espaço.
+concatenar :: String -> String -> String
+concatenar str1 str2 = str1 ++" "++ str2
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (concatenar "Big" "Data")
