@@ -1,8 +1,11 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 1
+-- Crie uma função ehTriangulo que determina se três lados x, y, z podem formar um triângulo.
+ehTriangulo :: Double->Double->Double->Bool
+ehTriangulo x y z
+  |x+y<=z =False
+  |x+z<=y =False
+  |y+z<=x =False
+  |otherwise = True
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (ehTriangulo 1 2 1) 
+  print (ehTriangulo 3 4 5) 
