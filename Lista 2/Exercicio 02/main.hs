@@ -1,8 +1,13 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 02
+-- Crie uma função tipoTriangulo que determina o tipo do triângulo formado pelos três lados x, y, z.
+tipoTriangulo :: Double->Double->Double->String
+tipoTriangulo x y z
+  |x==y && x==z && y==z ="Equilatero"
+  |x==y || x==z || y==z ="Isoceles"
+  |x/=y && x/=z && y/=z ="Escaleno"
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (tipoTriangulo 1 2 1) 
+  print (tipoTriangulo 2 2 1)
+  print (tipoTriangulo 6 6 6) 
+  print (tipoTriangulo 4 20 20) 
+  print (tipoTriangulo 3 4 5) 
