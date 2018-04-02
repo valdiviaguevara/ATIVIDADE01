@@ -1,8 +1,8 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 05
+--Faça uma função que calcule a soma dos dígitos de um número.
+soma_digitos :: Integer -> Integer
+soma_digitos numero = sum [read [digito] | digito <- show numero]
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (soma_digitos 5) 
+  print (soma_digitos 523) 
+  print (soma_digitos 2018)
