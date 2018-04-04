@@ -1,8 +1,6 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 07
+--Faça uma função que calcule o coeficiente binomial de (m,n).
+coef_binomial :: Integer -> Integer -> Integer
+coef_binomial m n = product [1+m-n..m] `div` product [1..n]
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (coef_binomial  5 3)
