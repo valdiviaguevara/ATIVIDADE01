@@ -1,8 +1,10 @@
 --Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Crie uma função divisivel20 x que retorna verdadeiro se x for divisível por todos os números de 1 a 20.
+list_divisivel20::Integer->[Integer]
+list_divisivel20 i= [n|n<-[1..20],i `mod`n==0]
+divisivel20::Integer->Bool
+divisivel20 x =length (list_divisivel20 x) ==20 
+
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (divisivel20 16761064320)
+  print (divisivel20 6235)
