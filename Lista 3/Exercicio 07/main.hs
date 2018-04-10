@@ -1,8 +1,15 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 07
+--Implemente uma função collatzLen x que retorna o tamanho da lista formada pela aplicação repetida de collatz sobre o valor x até que essa chegue no número 1.
+collatz :: Integer->Integer
+collatz x 
+    | even x = div x 2
+    | otherwise = 3*x + 1
+collatzLen :: Integer -> Int
+collatzLen x = length $ takeWhile (>1) $ x: prox x
+    where prox x = collatz x : (prox (collatz x))
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  --Para numero Par
+  print (collatzLen 48)
+  --Para numero Impar
+  print (collatzLen 57)
+  
