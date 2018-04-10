@@ -1,8 +1,12 @@
 --Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Faça uma função que gere uma matriz identidade de tamanho n.
+-- type Matriz a = [[a]]
+matriz_identidade :: Num a => Int -> [[a]]
+matriz_identidade n = matriz_identidade' 0 n
+    where 
+        zeros n = take n $ repeat 0
+        matriz_identidade' index n
+            | index >= n = []
+            | otherwise = (zeros index ++ [1] ++ zeros (n - index - 1)) : matriz_identidade' (index +1 ) n
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (matriz_identidade 5)
