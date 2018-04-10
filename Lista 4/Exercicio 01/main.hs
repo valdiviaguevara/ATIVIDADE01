@@ -1,6 +1,5 @@
 --Exercicio 01
 --Faça uma função que gere uma matriz identidade de tamanho n.
--- type Matriz a = [[a]]
 matriz_identidade :: Num a => Int -> [[a]]
 matriz_identidade n = matriz_identidade' 0 n
     where 
