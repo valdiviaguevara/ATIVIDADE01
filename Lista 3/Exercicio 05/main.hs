@@ -1,8 +1,6 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 05
+--Faça uma função para calcular o produto escalar entre dois vetores.
+dotProduct :: [Integer] -> [Integer] -> Integer
+dotProduct x y = sum ( zipWith (*) x y )
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (dotProduct [1,2,3,4] [5,6,7,8])
