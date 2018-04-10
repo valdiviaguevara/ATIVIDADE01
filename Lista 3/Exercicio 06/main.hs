@@ -1,8 +1,11 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 06
+--Crie a função collatz x que retorna x/2, se x for par e (3x+1) se for ímpar.
+collatz :: Integer->Integer
+collatz x 
+    | even x = div x 2
+    | otherwise = 3*x + 1
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  --Para numero Par
+  print (collatz 48)
+  --Para numero Impar
+  print (collatz 57)
