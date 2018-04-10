@@ -1,8 +1,7 @@
---Exercicio 01
-module Main where
--- |Fun ̧c~ao principal
-main :: IO ()
+--Exercicio 03
+--Crie a lista de números de Fibonacci utilizando uma função geradora.
+list_num_fibonacci :: [Integer]
+list_num_fibonacci = 1 : 1 : proximo 1 1
+    where proximo a b = a + b : proximo b (a+b)
 main = do
-    print (2*3+5)
-    print (2+2*3+1)
-    print (3^4+5*2^5+1)
+  print (take 10 list_num_fibonacci)
